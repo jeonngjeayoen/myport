@@ -1,0 +1,269 @@
+@charset "utf-8";
+.sec01{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(37,40,143,1) 0%, rgb(84, 141, 221) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.nep_bg{
+  position: absolute;
+  bottom: -100px;
+}
+.nep_bg .ufo{
+  position: absolute;
+  top: 100%;
+  width: 100px;
+  z-index: 1;
+  right: 250px;
+}
+.nep_bg .ufo.on{
+  top: 0%;
+  transition: 3s;
+}
+.nep_bg .ufo.bub{
+  animation: buble 1s /* 속도 */
+  linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+  infinite alternate; /* 무한 반복 */;
+}
+.nep_bg_img{
+  position: relative;
+  z-index: 9999999;
+  filter: drop-shadow(0px 0px 20px rgba(37, 41, 143, 0.281))
+}
+.nep_bg,.nep_bg img{
+  width: 100%;
+}
+.nep_bg.up{
+  transform: translateY(-80px);
+  transition: 1s;
+}
+.n_art,.n_art2{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+}
+label[for=user_input]{
+  display: none;
+}
+.n_art2{
+  border: 1px solid #fff;
+  overflow-y: scroll;
+}
+.n_art2::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.qust{
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+}
+#user_input{
+  width: 510px;
+  height: 50px;
+  border: 4px solid #361B75;
+  text-indent: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+#user_input:focus{
+  outline: none;
+}
+.submit{
+  width: 170px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  background: #361B75;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+.user{
+  background: #fff;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 10px;
+  border: 4px solid #361B75;
+  color: #361B75;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.user::after,.chat::after,.chat2::after{
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid #361B75;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.chat::after,.chat2::after{
+  left: 10px;
+  background: #361B75;
+}
+.chat, .chat2{
+  border: 4px solid #361B75;
+  justify-content: start;
+  background: #361B75;
+  margin-left: 20px;
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px #361b7581;
+  margin-right: 20px;
+}
+.chat2{
+  margin-right: 60px;
+}
+#chat_history li{
+  line-height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.ico_star {
+  position: absolute;
+  width:6px;
+  height: 6px;
+  background-color: #989caa;
+  border-radius: 50%;
+}
+.ico_star1{
+  top:6%;
+  left:10%;
+  animation: small 1s infinite;
+}
+
+.ico_star2{
+  top:10%;
+  left:20%;
+  animation: small 2.3s infinite;
+}
+.ico_star3{
+  top:-17%;
+  left:10%;
+  animation: small 1.5s infinite;
+}
+.ico_star4{
+  top:51%;
+  right:15%;
+  animation: small .5s infinite;
+}
+.ico_star5{
+  top:13%;
+  right:20%;
+  animation: small 1.4s infinite;
+}
+.ico_star6{
+  top:-13%;
+  right:32%;
+  animation: small 1.2s infinite;
+}
+.ico_star7{
+  top:-12%;
+  left:32%;
+  animation: small 1.2s infinite;
+}
+#ufo_shadow{
+  position: relative;
+  width: 230px;
+  left: -64px;
+  top: 0px;
+}
+.ufo_bottom {
+  transform: scale(0);
+  position: relative;
+  top: -220px;
+  transition: 3s; /* 트랜지션 속성 추가 */
+}
+.ufo>img{
+  filter: drop-shadow(0px 0px 3px #0000008c)
+}
+.ufo_bottom.on {
+  transform: scale(1);
+  top: 0px;
+}
+.ufo_rotate{
+  top: -100px;
+  display: flex;
+  width: 200px;
+  position: relative;
+  left: -50%;
+  height: 200px;
+  border-radius: 50%;
+  transition: 1s;
+  animation: rotate 5s /* 속도 */
+  linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+  infinite; /* 무한 반복 */;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 20px #fff;
+}
+@keyframes rotate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@keyframes rotate2 {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(-360deg);}
+}
+.ufo_rotate li{
+  position: absolute;
+  line-height: 5px;
+  animation: rotate2 5s /* 속도 */
+  linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+  infinite; /* 무한 반복 */;
+}
+.ufo_rotate li:first-child{
+  left: -10%;
+  top: 60%;
+}
+.ufo_rotate li:nth-child(2){
+  right: 5%;
+  top: 10%;
+}
+.ufo_rotate li:nth-child(3){
+  left: 5%;
+  top: 10%;
+}
+.ufo_rotate li:nth-child(4){
+  right: -10%;
+  top: 60%;
+}
+.ufo_rotate li:last-child{
+  left: 40%;
+  bottom: -5px;
+}
+@keyframes small {
+  0%{
+      opacity:0;
+      transform:scale(0.3)
+  }
+  50%{
+      opacity:1;
+      transform:scale(0.6);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      background-color:#fff
+  }
+  100%{
+      opacity:0;
+      transform:scale(0.3)
+  }
+  
+}
+@keyframes buble {
+	0% {padding-top: 0px;}
+	100% {padding-top: 20px;}
+}
