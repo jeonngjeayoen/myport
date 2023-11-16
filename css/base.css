@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* html{overflow:hidden;} */
+*{padding : 0px; margin : 0px;}
+a{text-decoration: none; color: #333;}
+ol, li, ul{list-style: none;}
+h2{
+  font-weight: normal;
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  /*텍스트 선택 불가*/
+  -webkit-user-select: none !important; 
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  /* Prevent font scaling in landscape */
+  -webkit-text-size-adjust: none; /*Chrome, Safari, newer versions of Opera*/
+  -moz-text-size-adjust: none; /*Firefox*/
+  -ms-text-size-adjust: none;  /*Ie*/
+  -o-text-size-adjust: none; /*old versions of Opera*/
+}
+:root {
+  --m-color01 : #361B75;
+  --m-color02 : #fff;
+  --m-color03 : #d9d9d9;
+  --m-color04 : #090909;
+  --m-color05 : #C883C6;
+}

@@ -1,0 +1,251 @@
+@charset 'utf-8';
+header{
+  z-index: 9999999;
+}
+main{
+  width: 100%;
+}
+.sec01{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(0,119,102,1) 0%, rgba(182,249,133,1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.mars_bg_img{
+  filter: drop-shadow(0px 0px 20px rgba(0, 119, 101, 0.438))
+}
+.mars_bg{
+  width: 100%;
+  position: absolute;
+  bottom: -200px;
+  z-index: 99999;
+}
+.mars_bg.up{
+  transform: translateY(-50px);
+  transition: 1s;
+}
+.mars_bg img{
+  width: 100%;
+  display: block;
+}
+.space_line{
+  position: absolute;
+  left: -90%;
+  bottom: 63%;
+}
+.space_line svg{
+  width: 80%;
+}
+.craft{
+  top: 120px;
+  left: 400px;
+  width: 200px;
+  position: relative;
+  z-index: -1;
+}
+.craft .fire{
+  transform: rotate(-75deg);
+  position: absolute;
+  top: 98px;
+  left: -13px;
+}
+.craft img{
+  transform: rotate(90deg);
+}
+.mars_art{
+  position: relative;
+  width: 100%;
+}
+.single01,.single02,.single03,.single04{
+  position: absolute;
+  transform: scale(0);
+  z-index: 9999999;
+  display: block;
+}
+.single01{
+  right: 0px;
+  top: 10px;
+}
+.single02{
+  top: 20px;
+  right: 500px;
+}
+.single03{
+  top: 20px;
+  left: 620px;
+}
+.single04{
+  top: 20px;
+  left: 100px;
+}
+.single01.on{
+  transform: scale(1) translatey(150px) translatex(30%);
+  transition: 3s;
+}
+.single02.on{
+  transform: scale(1) translatey(270px) translatex(40%);
+  transition: 3s;
+}
+.single03.on{
+  transform: scale(1) translatey(150px) translatex(10%);
+  transition: 3s;
+}
+.single04.on{
+  transform: scale(1) translatey(300px) translatex(20%);
+  transition: 3s;
+}
+.bub{
+  animation: buble 1s /* 속도 */
+  linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+  infinite alternate; /* 무한 반복 */;
+}
+.sing .buble{
+  width: 80px;
+  filter: drop-shadow(2px 2px 3px #0000008c)
+}
+.sing .wep{
+  width: 100%;
+  position: absolute;
+  border: 10px solid #090909;
+  z-index: 9999;
+}
+.sing .card_box{
+  width: 420px;
+  height: 220px;
+  left: -40%;
+  top: -5px;
+  position: relative;
+}
+.sing .card_box .card{
+  display: block;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transform: perspective(600px);
+  transform-style:preserve-3d;
+  transition: 1s;
+}
+.sing .card_box .card img{
+  backface-visibility: hidden;
+}
+.sing .card_box .card .back{
+  width: 100%;
+  height: 200px;
+  border: 10px solid #fff;
+  background: #000;
+}
+.sing .card_box .card .back p{
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+}
+.card_box:hover .card{
+  transition: 1s;
+  transform: rotateY(180deg) translateX(-20px);
+}
+.sing .card .back{
+  transform: rotateY(180deg);
+}
+.btn a{
+  background: #EE3212;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  line-height: 30px;
+}
+.btn a:nth-child(2){
+  border: 1px solid #EE3212;
+  background: #fff;
+  color: #EE3212;
+  display: inline-block;
+  width: 100px;
+  line-height: 30px;
+}
+.ico_star {
+  position: absolute;
+  width:6px;
+  height: 6px;
+  background-color: #989caa;
+  border-radius: 50%;
+}
+.ico_star1{
+  top:-6%;
+  left:10%;
+  animation: small 1s infinite;
+}
+
+.ico_star2{
+  top:-10%;
+  left:20%;
+  animation: small 2.3s infinite;
+}
+.ico_star3{
+  top:-21%;
+  left:10%;
+  animation: small 1.5s infinite;
+}
+.ico_star4{
+  top:-16%;
+  right:15%;
+  animation: small .5s infinite;
+}
+.ico_star5{
+  top:-13%;
+  right:20%;
+  animation: small 1.4s infinite;
+}
+.ico_star6{
+  top:-19%;
+  right:32%;
+  animation: small 1.2s infinite;
+}
+.ico_star7{
+  top:-13%;
+  left:32%;
+  animation: small 1.2s infinite;
+}
+.big_link{
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  line-height: 200px;
+  z-index: 1;
+}
+.btn{
+  position: relative;
+  z-index: 999;
+}
+.sing .card_box ~ p{
+  text-align: center;
+  position: relative;
+  left: -170px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+@keyframes buble {
+	0% {margin-top: 0px;}
+	100% {margin-top: 20px;}
+}
+@keyframes small {
+  0%{
+      opacity:0;
+      transform:scale(0.3)
+  }
+  50%{
+      opacity:1;
+      transform:scale(0.6);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      background-color:#fff
+  }
+  100%{
+      opacity:0;
+      transform:scale(0.3)
+  }
+  
+}

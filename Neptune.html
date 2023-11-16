@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/neptune.css" type="text/css">
+    <link rel="stylesheet" href="./css/fire.css">
+    <link rel="stylesheet" href="./webfontkit-20211110-083531/stylesheet.css">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/neptune.js"></script>
+    <link rel="icon" sizes="57x57" href="./img/pvicon.png">
+    <title>jung universe</title>
+</head>
+<body ondragstart="return false">
+    <header>
+        <h1>
+            <a href="https://jeonngjeayoen.github.io/myport/index.html" title="메인바로가기">
+                <img src="./img/logo.png" alt="상단로고">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://jeonngjeayoen.github.io/myport/Jupiter.html" title="팀프로젝트">
+                        <i class="fas fa-arrow-left"></i>
+                        team
+                    </a>
+                </li>
+                <li>
+                    <a href="https://jeonngjeayoen.github.io/myport/earth.html" title="프로필보기">
+                        profile
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sec01">
+            <div class="nep_bg">
+                <div class="ufo">
+                    <img src="./img/ufo.png" alt="ufo사진">
+                    <div class="ufo_bottom">
+                        <img src="./img/ufo_shadow.png" alt="ufo그림자" id="ufo_shadow">
+                        <ul class="ufo_rotate">
+                            <li>안녕</li>
+                            <li>자기소개</li>
+                            <li>연락처</li>
+                            <li>적성</li>
+                            <li>포부</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="./img/Nep_bg.png" alt="천왕성" class="nep_bg_img">
+                <div class="star">
+                    <div class="ico_star ico_star1"></div>
+                    <div class="ico_star ico_star2"></div>
+                    <div class="ico_star ico_star3"></div>
+                    <div class="ico_star ico_star4"></div>
+                    <div class="ico_star ico_star5"></div>
+                    <div class="ico_star ico_star6"></div>
+                    <div class="ico_star ico_star7"></div>
+                </div>
+            </div>
+            <article class="n_art">
+                <form method="get" action="chatbot.php">
+                    <p class="qust">
+                    <label for="user_input">질문:</label>
+                    <input type="text" name="user_input" id="user_input" placeholder="질문을 입력해주세요" required>
+                    <button class="submit" type="submit">보내기</button>
+                    </p>
+                </form>
+            </article>
+            <article class="n_art2">
+                <ul id="chat_history">
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>
+            <a href="#">
+                <img src="./img/footer_logo.png" alt="하단로고">
+            </a>
+        </h2>
+        <address>Copyright © 2022 Jung Jea Yeon. All Rights Reserved</address>
+        <aside>
+            <a href="#" title="맨위로 이동">Back to Top</a>
+        </aside>
+    </footer>
+</body>
+</html>
