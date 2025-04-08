@@ -6,209 +6,73 @@ $(function(){
 		$('.particle_off').toggleClass('particle');
 		$('.mouse_line').toggleClass('hover');
 	})
-  //첫번째 모달
-	$('.sec02_wrap ul li:first-child').click(function(){
-			$('.e_ball1').delay(200).animate({
-				'opacity': '1',
-				'z-index':'999999'
-			}, 100).animate({
-				'border-radius': '50%'
-			}, 100).animate({
-				'width': '1px'
-			}, 100).animate({
-				'height': '1px'
-			}, 200, function () {
-				$('.e_ball1')
-					.animate({
-						'width': '3000px',
-						'height': '3000px',
-						'top': '-320%',
-						'left': '-125%',
-					}, 1000,function(){
-						$('.modal_wrap01').addClass('mw01');
-						$('header').css({'display':'none'});
-						$(window).scrollTop(0);
-						$('.modal img').animate({
-							"margin-top" : "100px",
-							'opacity': '1'
-						});
-					})
-			$('.wrap').css({'overflow':'hidden'});
+	function openModal(index, ballClass, modalClass) {
+		let li = $('.sec02_wrap ul li').eq(index - 1);
+		let offset = li.offset();
+		let scrollTop = $(window).scrollTop();
+		
+		$(ballClass).css({
+			'position': 'fixed',
+			'top': offset.top - scrollTop + li.height() / 2,
+			'left': offset.left + li.width() / 2,
+			'width': '10px',
+			'height': '10px',
+			'opacity': '0',
+			'border-radius': '0%',
+			'z-index': '999999',
+			'transform': 'translate(-50%, -50%)'
+		}).delay(100).animate({
+			'opacity': '1'
+		}, 100).animate({
+			'border-radius': '50%'
+		}, 100).animate({
+			'width': '1px',
+			'height': '1px'
+		}, 100).animate({
+			'width': '3000px',
+			'height': '3000px'
+		}, 1000, function(){
+			$(modalClass).addClass(`mw0${index}`);
+			$('header').hide();
+			$(window).scrollTop(0);
+			$('.modal img').animate({
+				'margin-top': '100px',
+				'opacity': '1'
 			});
-			
-	});
+			$('body').css({'overflow': 'hidden'});
+		});
+	}
 	
-	$('.modal_wrap01').click(function(){
+	function closeModal(index, ballClass, modalClass) {
 		$('.modal img').animate({
-			"margin-top" : "150px",
+			"margin-top": "150px",
 			'opacity': '0'
-		},function(){
-			$(window).scrollTop($(document).height());
-			$(".modal_wrap01").removeClass('mw01')
-		});
-		$('.e_ball1').animate({
-					'width': '1px',
-					'height': '1px',
-					'top': '30%',
-					'left': '50%',
-				}, 1000).animate({
-					'opacity': '0'
-				}, 100)
-		$('header').css({'display':'block'});
-				
-	});
-	//두번째 모달
-	$('.sec02_wrap ul li:nth-child(2)').click(function(){
-		$('.e_ball2').delay(200).animate({
-			'opacity': '1',
-			'z-index':'999999'
-		}, 100).animate({
-			'border-radius': '50%'
-		}, 100).animate({
-			'width': '1px'
-		}, 100).animate({
-			'height': '1px'
-		}, 200, function () {
-			$('.e_ball2')
-				.animate({
-					'width': '3000px',
-					'height': '3000px',
-					'top': '-420%',
-					'left': '-225%',
-				}, 1000,function(){
-					$('.modal_wrap02').addClass('mw02');
-					$('header').css({'display':'none'});
-					$('.modal img').animate({
-						"margin-top" : "100px",
-						'opacity': '1'
-					});
-				})
-		$('body').css({'overflow':'hidden'});
-		$(window).scrollTop($(document).height());
-		});
-		
-	});
-	
-	$('.modal_wrap02').click(function(){
-		$('.modal img').animate({
-			"margin-top" : "150px",
-			'opacity': '0'
-		},function(){
-			$(".modal_wrap02").removeClass('mw02')
-		});
-		$('.e_ball2').animate({
-					'width': '1px',
-					'height': '1px',
-					'top': '50%',
-					'left': '50%',
-				}, 1000).animate({
-					'opacity': '0'
-				}, 100)
-				$('header').css({'display':'block'});
-				$('body').css({'overflow':'visible'});
-				
-	});
-	//모달 세번째
-	$('.sec02_wrap ul li:nth-child(3)').click(function(){
-		$('.e_ball3').delay(200).animate({
-			'opacity': '1',
-			'z-index':'999999'
-		}, 100).animate({
-			'border-radius': '50%'
-		}, 100).animate({
-			'width': '1px'
-		}, 100).animate({
-			'height': '1px'
-		}, 200, function () {
-			$('.e_ball3')
-				.animate({
-					'width': '3000px',
-					'height': '3000px',
-					'top': '-420%',
-					'left': '-325%',
-				}, 1000,function(){
-					$('.modal_wrap03').addClass('mw03');
-					$('header').css({'display':'none'});
-					$('.modal img').animate({
-						"margin-top" : "100px",
-						'opacity': '1'
-					});
-				})
-				$('body').css({'overflow':'hidden'});
-				$(window).scrollTop($(document).height());
-			});
-		
-	});
-	$('.modal_wrap03').click(function(){
-		$('.modal img').animate({
-			"margin-top" : "150px",
-			'opacity': '0'
-		},function(){
-			$(".modal_wrap03").removeClass('mw03')
-		});
-		$('.e_ball3').animate({
-					'width': '1px',
-					'height': '1px',
-					'top': '50%',
-					'left': '50%',
-				}, 1000).animate({
-					'opacity': '0'
-				}, 100)
-		$('header').css({'display':'block'});
-		$('body').css({'overflow':'visible'});
-				
-	});
-	//모달 네번째
-	$('.sec02_wrap ul li:last-child').click(function(){
-		$('.e_ball4').delay(200).animate({
-			'opacity': '1',
-			'z-index':'999999'
-		}, 100).animate({
-			'border-radius': '50%'
-		}, 100).animate({
-			'width': '1px'
-		}, 100).animate({
-			'height': '1px'
-		}, 200, function () {
-			$('.e_ball4')
-				.animate({
-					'width': '3000px',
-					'height': '3000px',
-					'top': '-340%',
-					'left': '-425%',
-				}, 1000,function(){
-					$('.modal_wrap04').addClass('mw04');
-					$(window).scrollTop(0);
-					$('header').css({'display':'none'});
-					$('.modal img').animate({
-						"margin-top" : "100px",
-						'opacity': '1'
-					});
-				})
-		$('.wrap').css({'overflow':'hidden'});
-		});
-		
-	});
-	
-	$('.modal_wrap04').click(function(){
-		$('.modal img').animate({
-			"margin-top" : "150px",
-			'opacity': '0'
-		},function(){
-			$(".modal_wrap04").removeClass('mw04');
+		}, function(){
+			$(modalClass).removeClass(`mw0${index}`);
+			$('header').show();
+			$('body').css({'overflow': 'visible'});
 			$(window).scrollTop($(document).height());
 		});
-		$('.e_ball4').animate({
-					'width': '1px',
-					'height': '1px',
-					'top': '50%',
-					'left': '50%',
-				}, 1000).animate({
-					'opacity': '0'
-				}, 100)
-		$('header').css({'display':'block'});
-				
+	
+		$(ballClass).animate({
+			'width': '1px',
+			'height': '1px'
+		}, 1000).animate({
+			'opacity': '0'
+		}, 100);
+	}
+	
+	$('.sec02_wrap ul li').each(function(i) {
+		$(this).click(function() {
+			openModal(i + 1, `.e_ball${i + 1}`, `.modal_wrap0${i + 1}`);
+		});
 	});
+	
+	$('.modal_wrap01, .modal_wrap02, .modal_wrap03, .modal_wrap04').click(function() {
+		let index = $(this).attr('class').match(/modal_wrap0(\d)/)[1];
+		closeModal(index, `.e_ball${index}`, `.modal_wrap0${index}`);
+	});
+	
 	// 이름 바꾸기
 	var idx=0
 	var chAngtxt= $('.name_box ul li')

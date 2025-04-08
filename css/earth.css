@@ -35,6 +35,7 @@ main{
 }
 .art1 .photo img{
     width: 35%;
+    max-width: 420px;
     box-sizing: border-box;
     box-shadow: 0 0 10px #09090986;
     border: 20px solid #fff;
@@ -330,10 +331,12 @@ li:last-child .bar_bg .active {
     z-index: 9999999;
   }
   .mw02{
-    position: relative;
-    top: 210vh;
+    position: fixed;
     background: #6b6b6b;
     height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
   .mw03{
     position: relative;
@@ -355,6 +358,7 @@ li:last-child .bar_bg .active {
     right: 7%;
     transform: rotate(45deg);
     cursor: pointer;
+    z-index: 99999;
   }
   .mw01::before,.mw02::before,.mw03::before,.mw04::before{
     display: inline-block;
@@ -367,6 +371,7 @@ li:last-child .bar_bg .active {
     right: 7%;
     transform: rotate(-45deg);
     cursor: pointer;
+    z-index: 99999;
   }
   .img_box{
     position: relative;
@@ -425,4 +430,14 @@ li:last-child .bar_bg .active {
   .info{padding-left: 50px;}
   .sec02_wrap ul li{width: 50%;}
   .sec02_wrap ul{height: 1200px;}
+  .bar_bg{width: 450px;}
+}
+@media(max-width:1000px){
+  .sec01_wrap .photo,.sec01_wrap .art2{width: 100%;}
+  .skill_lab{position: relative;}
+  .sec01_wrap .art1{height: 380px;}
+  .sec01_wrap .art2{margin-right: 40px;}
+  .sec02_wrap ul li,.sec02_wrap .img_box{height: 180px;}
+  .sec02_wrap ul {height: 720px;}
+  .sec02_wrap ul li:nth-child(2n) {top: 180px;}
 }
