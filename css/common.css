@@ -80,3 +80,8 @@ footer aside{
 footer aside a{
   color: #fff;
 }
+@media(max-width:1000px){
+  header h1 img{left: 50%; top: 50%;  transform: translateX(-50%) translateY(-50%); width: 90px;}
+  footer h2 img{left: 50px; width: 90px; }
+  header nav ul li{margin: 0 20px;}
+}

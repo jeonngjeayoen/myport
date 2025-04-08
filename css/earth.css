@@ -123,7 +123,8 @@ main{
     margin-bottom: 20px;
 }
 .skill_lab ul li{
-    margin-bottom: 20px;
+    display: block;
+    height: 40px;
 }
 .bar_bg {
   background: #f0f0f0;
@@ -339,8 +340,6 @@ li:last-child .bar_bg .active {
     transform: translateX(-50%) translateY(-50%);
   }
   .mw03{
-    position: relative;
-    top: 210vh;
     background: #ED79A0;
     height: 100vh;
   }
@@ -440,4 +439,13 @@ li:last-child .bar_bg .active {
   .sec02_wrap ul li,.sec02_wrap .img_box{height: 180px;}
   .sec02_wrap ul {height: 720px;}
   .sec02_wrap ul li:nth-child(2n) {top: 180px;}
+  .art1 .photo img{width:300px; position: absolute; left: 50%; transform: translateX(-50%);}
+  .info{margin-bottom: 50px; margin-top: 0px; width: auto;}
+  .sec01_wrap .art2{margin-bottom: 50px;}
+  .skill_lab{padding-left: 50px; width: 100%;}
+  .skill_lab .bar_bg{width: 100%;}
+  .mouse{left: 150px;}
+  .sec02_wrap{padding-top: 50px; }
+  .sec02_wrap h2{margin-top: 0;}
+  .sec02_wrap article{padding-top: 50px;}
 }
