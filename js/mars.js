@@ -1,35 +1,23 @@
-$(function(){
-  $('.mars_bg').stop().addClass('up',200);
-  setTimeout(function(){
-  intro()
-  function intro(){
-  
+$('.mars_bg').stop().addClass('up', 200);
 
-      const path = anime.path('.craft_line path'); //path 등록
+setTimeout(function () {
+  intro();
 
-      
-      const tl = anime.timeline({
-      })
-    tl.add({
-    targets:'.craft',
-    translateX:path('x'),
-    translateY:path('y'),
-    rotate:path('angle'),
-    easing:'linear',
-    duration:6000,
-    loop:true,
-    
-  })
+  function intro() {
+    // .craft 이동 애니메이션 (path 없이)
+    $(".craft").addClass("on");
+
+    // 타이밍 맞춰 클래스 부여 (애니메이션 기준 6000ms)
+    setTimeout(() => $('.single01').addClass('on'), 700);
+    setTimeout(() => $('.single01').addClass('bub'), 2500);
+
+    setTimeout(() => $('.single02').addClass('on'), 1200);
+    setTimeout(() => $('.single02').addClass('bub'), 2800);
+
+    setTimeout(() => $('.single03').addClass('on'), 2000);
+    setTimeout(() => $('.single03').addClass('bub'), 3000);
+
+    setTimeout(() => $('.single04').addClass('on'), 2600);
+    setTimeout(() => $('.single04').addClass('bub'), 2300);
   }
-  $('.single01').addClass('on',700);
-  $('.single01').addClass('bub',2500);
-  $('.single02').addClass('on',1200);
-  $('.single02').addClass('bub',2500);
-  $('.single03').addClass('on',2000);
-  $('.single03').addClass('bub',2500);
-  $('.single04').addClass('on',2600);
-  $('.single04').addClass('bub',2500);
-  },1000);
-  
-  
-})
+}, 1000);

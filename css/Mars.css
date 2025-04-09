@@ -1,6 +1,6 @@
 @charset 'utf-8';
 header{
-  z-index: 9999999;
+  z-index: 9999999999999;
 }
 main{
   width: 100%;
@@ -37,21 +37,24 @@ main{
 .space_line svg{
   width: 80%;
 }
-.craft{
-  top: 120px;
-  left: 400px;
+.craft {
   width: 200px;
-  position: relative;
-  z-index: -1;
+  position: absolute;
+  right: -200px;
+}
+.craft.on {
+  transform: translateX(-3500px); /* 회전 + 이동 둘 다 */
+  transition: 10s;
 }
 .craft .fire{
-  transform: rotate(-75deg);
+  transform: rotate(75deg);
   position: absolute;
   top: 98px;
-  left: -13px;
+  right: 0px;
 }
 .craft img{
-  transform: rotate(90deg);
+  transform: rotate(270deg);
+  width: 100%;
 }
 .mars_art{
   position: relative;
@@ -63,36 +66,36 @@ main{
   z-index: 9999999;
   display: block;
 }
-.single01{
-  right: 0px;
+.single01 {
+  right: 0%;        
   top: 10px;
 }
-.single02{
+.single02 {
+  right: 34.72%;    
   top: 20px;
-  right: 500px;
 }
-.single03{
+.single03 {
+  left: 43.05%;      
   top: 20px;
-  left: 620px;
 }
-.single04{
+.single04 {
+  left: 6.94%;       
   top: 20px;
-  left: 100px;
 }
 .single01.on{
-  transform: scale(1) translatey(150px) translatex(30%);
+  transform: scale(1) translateY(150px) translatex(30%);
   transition: 3s;
 }
 .single02.on{
-  transform: scale(1) translatey(270px) translatex(40%);
+  transform: scale(1) translateY(270px) translatex(40%);
   transition: 3s;
 }
 .single03.on{
-  transform: scale(1) translatey(150px) translatex(10%);
+  transform: scale(1) translateY(150px) translatex(10%);
   transition: 3s;
 }
 .single04.on{
-  transform: scale(1) translatey(300px) translatex(20%);
+  transform: scale(1) translateY(300px) translatex(20%);
   transition: 3s;
 }
 .bub{
@@ -220,7 +223,7 @@ main{
   position: relative;
   z-index: 999;
 }
-.sing .card_box ~ p{
+.sing .card > p{
   text-align: center;
   position: relative;
   left: -170px;
@@ -248,4 +251,20 @@ main{
       transform:scale(0.3)
   }
   
+}
+@media(max-width:1000px){
+  .sing .card_box,.sing .card_box .card{
+    width: 180px;
+    font-size: 12px;
+  }
+  .big_link,.sing .card_box .card .back p{
+    line-height: 20px;
+  }
+  .sing .card_box .card .back{
+    height: 90px;
+  }
+  .btn a,.btn a:nth-child(2){line-height: 20px;}
+  .single04 .btn a:nth-child(2){display: none;}
+  .sing .wep ,.sing .card_box .card .back{width: 180px;}
+  .mars_bg .mars_bg_img{width: 1000px;}
 }

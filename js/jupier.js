@@ -7,9 +7,9 @@ $(function(){
   $('.phone_img').addClass('on');
   $('.lightning').addClass('on',100);
   $('.lightning').removeClass('on',100);
-  $('.tab01').delay(3000).animate({'top':'150px'});
-  $('.tab02').delay(3200).animate({'top':'170px'});
-  $('.tab03').delay(3400).animate({'top':'170px'});
+  $('.tab01').delay(3000).animate({'top':'140px'});
+  $('.tab02').delay(3200).animate({'top':'160px'});
+  $('.tab03').delay(3400).animate({'top':'160px'});
   $('.tab01 p').addClass('on');
   // 첫번째 번개
   $('.lightning02').addClass('on',1000);
@@ -52,9 +52,9 @@ $(function(){
     $('.tab01 p').addClass('on');
     $('.tab02 p').removeClass('on');
     $('.tab03 p').removeClass('on');
-    $('.tab01').animate({'top':'150px'});
-    $('.tab02').animate({'top':'170px'});
-    $('.tab03').animate({'top':'170px'});
+    $('.tab01').animate({'top':'140px'});
+    $('.tab02').animate({'top':'160px'});
+    $('.tab03').animate({'top':'160px'});
     //다른버튼
     $('.img_box2').animate({
       'height': '0px',
@@ -131,9 +131,9 @@ $('.phone_img').delay(800).animate({
     $('.tab02 p').addClass('on');
     $('.tab01 p').removeClass('on');
     $('.tab03 p').removeClass('on');
-    $('.tab01').animate({'top':'170px'});
-    $('.tab02').animate({'top':'150px'});
-    $('.tab03').animate({'top':'170px'});
+    $('.tab01').animate({'top':'160px'});
+    $('.tab02').animate({'top':'140px'});
+    $('.tab03').animate({'top':'160px'});
     //다른버튼
     $('.img_box').animate({
       'height': '0px',
@@ -210,9 +210,9 @@ $('.phone_img2').delay(800).animate({
     $('.tab03 p').addClass('on');
     $('.tab01 p').removeClass('on');
     $('.tab02 p').removeClass('on');
-    $('.tab01').animate({'top':'170px'});
-    $('.tab02').animate({'top':'170px'});
-    $('.tab03').animate({'top':'150px'});
+    $('.tab01').animate({'top':'160px'});
+    $('.tab02').animate({'top':'160px'});
+    $('.tab03').animate({'top':'140px'});
     //다른버튼
     $('.img_box').animate({
       'height': '0px',

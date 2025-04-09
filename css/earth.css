@@ -449,3 +449,8 @@ li:last-child .bar_bg .active {
   .sec02_wrap h2{margin-top: 0;}
   .sec02_wrap article{padding-top: 50px;}
 }
+@media(max-width:500px){
+  .sec02_wrap ul li, .sec02_wrap .img_box{height: 150px;}
+  .sec02_wrap ul li:nth-child(2n){top: 150px;}
+  .sec02_wrap ul{height: 600px;}
+}
