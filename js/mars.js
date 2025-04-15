@@ -11,7 +11,7 @@ setTimeout(function () {
     setTimeout(() => $('.single01').addClass('on'), 700);
     setTimeout(() => $('.single01').addClass('bub'), 2500);
 
-    setTimeout(() => $('.single02').addClass('on'), 1200);
+    setTimeout(() => $('.single02').addClass('on'), 1000);
     setTimeout(() => $('.single02').addClass('bub'), 2800);
 
     setTimeout(() => $('.single03').addClass('on'), 2000);
