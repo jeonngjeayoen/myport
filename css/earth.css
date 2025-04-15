@@ -422,14 +422,13 @@ li:last-child .bar_bg .active {
   .sec02_wrap ul li:nth-child(3) img{
     transform: translateX(0);
   }
-}
-@media(max-width:1800px){
   .sec01_wrap{width: 100%;}
   .skill_lab{padding-right: 50px;}
   .info{padding-left: 50px;}
   .sec02_wrap ul li{width: 50%;}
   .sec02_wrap ul{height: 1200px;}
   .bar_bg{width: 450px;}
+  .art1{margin-left: 50px;}
 }
 @media(max-width:1000px){
   .sec01_wrap .photo,.sec01_wrap .art2{width: 100%;}
