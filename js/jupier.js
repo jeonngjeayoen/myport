@@ -36,12 +36,12 @@ $(function(){
 }, 500);
 //폰
   $('.phone_img').delay(2000).animate({
-    'width':'130px',
+    'width':'86%',
     'height':'5px'
   },500,function(){
     $('.phone_img img').removeClass('on');
   }).animate({
-    'height': '250px',
+    'height': '85%',
     'top': '49%'
   }, 500);
 //탭버튼 첫번째
@@ -99,13 +99,13 @@ $('.phone_img3').animate({
 }, 500);
 //실제폰
 $('.phone_img').delay(800).animate({
-  'width':'130px',
+  'width':'86%',
   'height':'5px'
 },500,function(){
   $('.phone_img img').removeClass('on');
   $('.phone_boxin div:first-of-type').addClass('on');
 }).animate({
-  'height': '250px',
+  'height': '85%',
   'top': '49%'
 }, 500);
     //실제이미지
@@ -178,7 +178,7 @@ $('.phone_img3').animate({
 }, 500);
 //실제폰
 $('.phone_img2').delay(800).animate({
-  'width':'130px',
+  'width':'86%',
   'height':'5px'
 },500,function(){
   $('.phone_img2 img').removeClass('on');
@@ -257,13 +257,13 @@ $('.phone_img').animate({
 }, 500);
 //실제폰
 $('.phone_img3').delay(800).animate({
-  'width':'130px',
+  'width':'86%',
   'height':'5px'
 },500,function(){
   $('.phone_img3 img').removeClass('on');
   $('.phone_boxin div:last-of-type').addClass('on');
 }).animate({
-  'height': '250px',
+  'height': '85%',
   'top': '49%'
 }, 500);
     //실제 이미지

@@ -102,6 +102,7 @@ footer{
 	height: 0; 
 	padding-bottom: 50.5%; 
   z-index: 99999;
+  overflow: hidden;
 }
 #monitorscreen div{
   display: none;
@@ -386,4 +387,32 @@ footer{
 }
 .info ul li{
   line-height: 30px;
+}
+@media(max-width:1800px){
+  .button{
+    left: -80px;
+  }
+  .info{width: 220px;}
+  .jupiter_bg, .jupiter_bg img{min-width: 1600px;}
+  .tab01, .tab02, .tab03{width: 5%;}
+  .info h2{font-size: 16px;}
+  .info ul li{font-size: 14px;}
+  .tab01 p, .tab02 p, .tab03 p,.button a{font-size: 12px;}
+  #monitor {
+    top: 180px;
+  }
+  .button p{width: 90px;}
+}
+@media(max-width:1200px){
+  .info h2{font-size: 14px;}
+  .info ul li{font-size: 12px;}
+  .info {width: 170px;}
+  .button{left: -20px;}
+  .jupiter_art01, .jupiter_art02, .jupiter_art03{top: 55%;}
+}
+@media(max-width:1000px){
+  #monitor{display: none;}
+  .jupiter_art{position: relative; top: 200px;}
+  .jupiter_art01, .jupiter_art02, .jupiter_art03 {width: 50px;}
+  .phone_box{right: 50%; transform: translateX(50%); width: 300px; top: -50px;}
 }
