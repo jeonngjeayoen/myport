@@ -70,4 +70,8 @@ $(function() {
   setInterval(function() {
     $(".n_art2").scrollTop($(".n_art2")[0].scrollHeight);
   }, 1000);
+  $('.ufo_rotate li').click(function() {
+    let text = $(this).text();         // 클릭한 li의 텍스트 가져오기
+    $('#user_input').attr('placeholder', text); // input placeholder 변경
+});
 });
