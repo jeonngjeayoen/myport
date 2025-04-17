@@ -392,9 +392,9 @@ footer{
 }
 .info h2{margin-bottom: 20px;}
 .info ul li{line-height: 30px;}
-.wep{transition: 0.5s ease;}
-.wep.width{width: 50%;}
-.wep.b-width{width: 98%;}
+.wep{transition: 0.5s ease; opacity: 0;}
+.wep.width{width: 50%; opacity: 0;}
+.wep.b-width{width: 98%; opacity: 1;}
 @media(max-width:1800px){
   .button{left: -80px;}
   .info{width: 220px;}
