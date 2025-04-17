@@ -10,7 +10,6 @@ $(function () {
         let li = $('.sec02_wrap ul li').eq(index - 1);
         let offset = li.offset();
         let scrollTop = $(window).scrollTop();
-
         $(ballClass)
             .css({
                 position: 'fixed',
@@ -24,54 +23,28 @@ $(function () {
                 transform: 'translate(-50%, -50%)',
             })
             .delay(100)
-            .animate(
-                {
+            .animate({ opacity: '1' }, 100)
+            .animate({ 'border-radius': '50%' }, 100)
+            .animate({ width: '1px', height: '1px' }, 100)
+            .animate({ width: '3000px', height: '3000px' }, 1000, function () {
+                $(modalClass).addClass(`mw0${index}`);
+                $('header').hide();
+                $(window).scrollTop(0);
+                $('.modal img').animate({
+                    'margin-top': '100px',
                     opacity: '1',
-                },
-                100
-            )
-            .animate(
-                {
-                    'border-radius': '50%',
-                },
-                100
-            )
-            .animate(
-                {
-                    width: '1px',
-                    height: '1px',
-                },
-                100
-            )
-            .animate(
-                {
-                    width: '3000px',
-                    height: '3000px',
-                },
-                1000,
-                function () {
-                    $(modalClass).addClass(`mw0${index}`);
-                    $('header').hide();
-                    $(window).scrollTop(0);
-                    $('.modal img').animate({
-                        'margin-top': '100px',
-                        opacity: '1',
-                    });
-                    if (index === 2) {
-                        $('body').css({ overflow: 'hidden' });
-                    } else {
-                        $('body').css({ overflow: 'visible' });
-                    }
+                });
+                if (index === 2) {
+                    $('body').css({ overflow: 'hidden' });
+                } else {
+                    $('body').css({ overflow: 'visible' });
                 }
-            );
+            });
     }
 
     function closeModal(index, ballClass, modalClass) {
         $('.modal img').animate(
-            {
-                'margin-top': '150px',
-                opacity: '0',
-            },
+            { 'margin-top': '150px', opacity: '0' },
             function () {
                 $(modalClass).removeClass(`mw0${index}`);
                 $('header').show();
@@ -80,19 +53,8 @@ $(function () {
         );
 
         $(ballClass)
-            .animate(
-                {
-                    width: '1px',
-                    height: '1px',
-                },
-                1000
-            )
-            .animate(
-                {
-                    opacity: '0',
-                },
-                100
-            );
+            .animate({ width: '1px', height: '1px' }, 1000)
+            .animate({ opacity: '0' }, 100);
 
         if (index === '2') {
             $('body').css({ overflow: 'visible' });
@@ -132,54 +94,28 @@ $(function () {
                 transform: 'translate(-50%, -50%)',
             })
             .delay(100)
-            .animate(
-                {
+            .animate({ opacity: '1' }, 100)
+            .animate({ 'border-radius': '50%' }, 100)
+            .animate({ width: '1px', height: '1px' }, 100)
+            .animate({ width: '4000px', height: '4000px' }, 1000, function () {
+                $(modalClass).addClass(`mw0${index}`);
+                $('header').hide();
+                $(window).scrollTop(0);
+                $('.modal img').animate({
+                    'margin-top': '100px',
                     opacity: '1',
-                },
-                100
-            )
-            .animate(
-                {
-                    'border-radius': '50%',
-                },
-                100
-            )
-            .animate(
-                {
-                    width: '1px',
-                    height: '1px',
-                },
-                100
-            )
-            .animate(
-                {
-                    width: '4000px',
-                    height: '4000px',
-                },
-                1000,
-                function () {
-                    $(modalClass).addClass(`mw0${index}`);
-                    $('header').hide();
-                    $(window).scrollTop(0);
-                    $('.modal img').animate({
-                        'margin-top': '100px',
-                        opacity: '1',
-                    });
-                    if (index === 2 || index === 3) {
-                        $('body').css({ overflow: 'hidden' });
-                    } else {
-                        $('body').css({ overflow: 'visible' });
-                    }
+                });
+                if (index === 2 || index === 3) {
+                    $('body').css({ overflow: 'hidden' });
+                } else {
+                    $('body').css({ overflow: 'visible' });
                 }
-            );
+            });
     }
 
     function closeModal(index, ballClass, modalClass) {
         $('.modal img').animate(
-            {
-                'margin-top': '150px',
-                opacity: '0',
-            },
+            { 'margin-top': '150px', opacity: '0' },
             function () {
                 $(modalClass).removeClass(`mw0${index}`);
                 $('header').show();
@@ -188,20 +124,8 @@ $(function () {
         );
 
         $(ballClass)
-            .animate(
-                {
-                    width: '1px',
-                    height: '1px',
-                },
-                1000
-            )
-            .animate(
-                {
-                    opacity: '0',
-                },
-                100
-            );
-
+            .animate({ width: '1px', height: '1px' }, 1000)
+            .animate({ opacity: '0' }, 100);
         if (index === '2' || index === '3') {
             $('body').css({ overflow: 'visible' });
         }

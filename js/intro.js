@@ -1,7 +1,6 @@
 $(function () {
     function intro() {
         const path = anime.path('.path_line path'); //path 등록
-
         anime({
             targets: '.star01',
             translateX: path('x'),
@@ -34,56 +33,44 @@ $(function () {
     }
     intro();
     setInterval(intro, 6000);
-
     $('.won1').addClass('active_won1');
     $('.won2').addClass('active_won2');
     $('.bg').addClass('active_bg');
     $('.bg2').addClass('active_bg2');
-
     setTimeout(function () {
         $('.typing li:first-child').addClass('p_active1');
         $('.typing li:nth-child(2)').addClass('p_active2');
         $('.typing li:nth-child(3)').addClass('p_active3');
         $('.text_hello').addClass('p_active4');
-
         var typingIdx = 0;
         var lineIdx = 0;
         var lines = [];
-
         $('.typing-txt ul li').each(function () {
             lines.push($(this).text()); // 각 줄 추출
         });
-
         var typingTxt = lines[lineIdx];
-
         if (typingIdx < typingTxt.length) {
             var tyInt = setInterval(typing, 80);
         }
-
         function typing() {
             $('.cursor').addClass('on');
             var currentChar = typingTxt[typingIdx];
             var formattedChar = currentChar;
-
             if (currentChar === '우' || currentChar === '주') {
                 formattedChar =
                     "<span class='space'>" + currentChar + '</span>';
             } else if (currentChar === '웹') {
                 formattedChar = "<span class='wep'>" + currentChar + '</span>';
             }
-
             $('.typing').append(formattedChar);
             typingIdx++;
-
             if (typingIdx >= typingTxt.length) {
                 // 마지막 줄이 아니라면 줄바꿈 추가
                 if (lineIdx < lines.length - 1) {
                     $('.typing').append('<br>');
                 }
-
                 lineIdx++;
                 typingIdx = 0;
-
                 if (lineIdx >= lines.length) {
                     clearInterval(tyInt);
                 } else {
@@ -92,12 +79,10 @@ $(function () {
             }
         }
     }, 1000);
-
     $('nav ul li').click(function () {
         var ballIndex = $(this).data('ball-index'); // 클릭한 li의 data-ball-index 값을 가져옴
         animate(ballIndex);
     });
-
     function updatePositions() {
         if ($(window).width() < 1200) {
             topPosition = '1%';
