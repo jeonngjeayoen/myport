@@ -1,4 +1,6 @@
-$('.mars_bg').stop().addClass('up', 200);
+$(function () {
+    $('.mars_bg').stop().addClass('up', 200);
+});
 
 setTimeout(function () {
     intro();
