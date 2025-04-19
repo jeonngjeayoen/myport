@@ -1,183 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/base.css" type="text/css" />
-        <link rel="stylesheet" href="./css/common.css" type="text/css" />
-        <link rel="stylesheet" href="./css/Mars.css" type="text/css" />
-        <link rel="stylesheet" href="./css/fire.css" />
-        <link rel="stylesheet" href="./webfontkit-20211110-083531/stylesheet.css" />
-        <!-- 폰트어썸 -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        <!-- 제이쿼리 라이브러리 -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        <script src="./js/mars.js"></script>
-        <link rel="icon" sizes="57x57" href="./img/pvicon.png" />
-        <title>jung universe</title>
-    </head>
-    <body ondragstart="return false">
-        <header>
-            <h1>
-                <a href="./index.html" title="메인바로가기">
-                    <img src="./img/logo.png" alt="상단로고" />
-                </a>
-            </h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="earth.html" title="프로필보기">
-                            <i class="fas fa-arrow-left"></i>
-                            profile
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Jupiter.html" title="팀프로젝트">
-                            team
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="sec01">
-                <div class="mars_bg">
-                    <div class="space_line"></div>
-                    <img src="./img/mars_bg.png" alt="화성배경" class="mars_bg_img" />
-                    <div class="star">
-                        <div class="ico_star ico_star1"></div>
-                        <div class="ico_star ico_star2"></div>
-                        <div class="ico_star ico_star3"></div>
-                        <div class="ico_star ico_star4"></div>
-                        <div class="ico_star ico_star5"></div>
-                        <div class="ico_star ico_star6"></div>
-                        <div class="ico_star ico_star7"></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/base.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./css/Mars.css" type="text/css" />
+    <link rel="stylesheet" href="./css/fire.css" />
+    <link rel="stylesheet" href="./webfontkit-20211110-083531/stylesheet.css" />
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/mars.js"></script>
+    <link rel="icon" sizes="57x57" href="./img/pvicon.png" />
+    <title>jung universe</title>
+</head>
+
+<body ondragstart="return false">
+    <header>
+        <h1>
+            <a href="./index.html" title="메인바로가기">
+                <img src="./img/logo.png" alt="상단로고" />
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="earth.html" title="프로필보기">
+                        <i class="fas fa-arrow-left"></i>
+                        profile
+                    </a>
+                </li>
+                <li>
+                    <a href="Jupiter.html" title="팀프로젝트">
+                        team
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sec01">
+            <div class="mars_bg">
+                <div class="space_line"></div>
+                <img src="./img/mars_bg.png" alt="화성배경" class="mars_bg_img" />
+                <div class="star">
+                    <div class="ico_star ico_star1"></div>
+                    <div class="ico_star ico_star2"></div>
+                    <div class="ico_star ico_star3"></div>
+                    <div class="ico_star ico_star4"></div>
+                    <div class="ico_star ico_star5"></div>
+                    <div class="ico_star ico_star6"></div>
+                    <div class="ico_star ico_star7"></div>
+                </div>
+            </div>
+            <article class="mars_art">
+                <div class="single01 sing">
+                    <img src="./img/sing_react.png" alt="풍선" class="buble" />
+                    <div class="card_box">
+                        <div class="card">
+                            <img src="./img/kully.png" alt="컬리" class="wep01 wep" />
+                            <div class="back">
+                                <p>기여도 : 100%</p>
+                                <p>작업시간 : 1주</p>
+                                <p>
+                                    리엑트로 구현한 <br />마켓컬리 클론
+                                    사이트
+                                </p>
+                                <p class="btn">
+                                    <a href="https://jeonngjeayoen.github.io/Kully/" title="pc 보기" target="_blank">view
+                                        web</a>
+                                </p>
+                                <a href="https://jeonngjeayoen.github.io/Kully/" title="마켓컬리 바로가기" class="big_link"
+                                    target="_blank">&nbsp;</a>
+                            </div>
+                        </div>
+                        <p>마켓컬리 클론사이트</p>
+                        <p>REACT CSS</p>
                     </div>
                 </div>
-                <article class="mars_art">
-                    <div class="single01 sing">
-                        <img src="./img/sing_react.png" alt="풍선" class="buble"/>
-                        <div class="card_box">
-                            <div class="card">
-                                <img src="./img/kully.png" alt="컬리" class="wep01 wep"/>
-                                <div class="back">
-                                    <p>기여도 : 100%</p>
-                                    <p>작업시간 : 1주</p>
-                                    <p>
-                                        리엑트로 구현한 <br />마켓컬리 클론
-                                        사이트
-                                    </p>
-                                    <p class="btn">
-                                        <a href="https://jeonngjeayoen.github.io/Kully/" title="pc 보기" target="_blank">view web</a>
-                                    </p>
-                                    <a href="https://jeonngjeayoen.github.io/Kully/" title="마켓컬리 바로가기" class="big_link" target="_blank">&nbsp;</a>
-                                </div>
+                <div class="single02 sing">
+                    <img src="./img/buble02.png" alt="풍선" class="buble" />
+                    <div class="card_box">
+                        <div class="card">
+                            <img src="./img/casper.png" alt="캐스퍼" class="wep02 wep" />
+                            <div class="back">
+                                <p>기여도 : 100%</p>
+                                <p>작업시간 : 1.5주</p>
+                                <p>
+                                    php로 시승신청이 가능한 <br />현대
+                                    캐스퍼 클론 사이트
+                                </p>
+                                <p class="btn">
+                                    <a href="http://jjy981212.dothome.co.kr/casper/index.html" title="pc 보기"
+                                        target="_blank">view web</a>
+                                </p>
+                                <a href="http://jjy981212.dothome.co.kr/casper/index.html" title="캐스퍼 바로가기"
+                                    class="big_link" target="_blank">&nbsp;</a>
                             </div>
-                            <p>마켓컬리 클론사이트</p>
-                            <p>HTML CSS JS JSON</p>
                         </div>
+                        <p>현대캐스퍼 클론사이트</p>
+                        <p>HTML CSS JS PHP</p>
                     </div>
-                    <div class="single02 sing">
-                        <img src="./img/buble02.png" alt="풍선" class="buble" />
-                        <div class="card_box">
-                            <div class="card">
-                                <img src="./img/casper.png" alt="캐스퍼" class="wep02 wep"/>
-                                <div class="back">
-                                    <p>기여도 : 100%</p>
-                                    <p>작업시간 : 1.5주</p>
-                                    <p>
-                                        php로 시승신청이 가능한 <br />현대
-                                        캐스퍼 클론 사이트
-                                    </p>
-                                    <p class="btn">
-                                        <a href="http://jjy981212.dothome.co.kr/casper/index.html" title="pc 보기" target="_blank" >view web</a>
-                                    </p>
-                                    <a href="http://jjy981212.dothome.co.kr/casper/index.html" title="캐스퍼 바로가기" class="big_link" target="_blank" >&nbsp;</a>
-                                </div>
+                </div>
+                <div class="single03 sing">
+                    <img src="./img/buble03.png" alt="풍선" class="buble" />
+                    <div class="card_box">
+                        <div class="card">
+                            <img src="./img/calo02.png" alt="칼로바이" class="wep03 wep" />
+                            <div class="back">
+                                <p>기여도 : 100%</p>
+                                <p>작업시간 : 1주</p>
+                                <p>
+                                    php로 로그인과 회원가입이 가능한<br />
+                                    칼로바이 리뉴얼 사이트(반응형)
+                                </p>
+                                <p class="btn">
+                                    <a href="http://jjy981212.dothome.co.kr/calobye/" title="pc 보기" target="_blank">vew
+                                        web</a>
+                                </p>
+                                <a href="http://jjy981212.dothome.co.kr/calobye/" title="칼로바이 바로가기" class="big_link"
+                                    target="_blank">&nbsp;</a>
                             </div>
-                            <p>현대캐스퍼 클론사이트</p>
-                            <p>HTML CSS JS PHP</p>
                         </div>
+                        <p>칼로바이 리뉴얼 사이트</p>
+                        <p>HTML CSS JS PHP</p>
                     </div>
-                    <div class="single03 sing">
-                        <img src="./img/buble03.png" alt="풍선" class="buble" />
-                        <div class="card_box">
-                            <div class="card">
-                                <img src="./img/calo02.png" alt="칼로바이" class="wep03 wep" />
-                                <div class="back">
-                                    <p>기여도 : 100%</p>
-                                    <p>작업시간 : 1주</p>
-                                    <p>
-                                        php로 로그인과 회원가입이 가능한<br />
-                                        칼로바이 리뉴얼 사이트(반응형)
-                                    </p>
-                                    <p class="btn">
-                                        <a href="http://jjy981212.dothome.co.kr/calobye/" title="pc 보기" target="_blank" >vew web</a>
-                                    </p>
-                                    <a href="http://jjy981212.dothome.co.kr/calobye/" title="칼로바이 바로가기" class="big_link" target="_blank">&nbsp;</a>
-                                </div>
+                </div>
+                <div class="single04 sing">
+                    <img src="./img/buble04.png" alt="풍선" class="buble" />
+                    <div class="card_box">
+                        <div class="card">
+                            <img src="./img/kwang.png" alt="광동" class="wep04 wep" />
+                            <div class="back">
+                                <p>기여도 : 100%</p>
+                                <p>작업시간 : 2주</p>
+                                <p>
+                                    json을 활용하여 만든<br />
+                                    광동제약 리뉴얼 사이트(적응형)
+                                </p>
+                                <p class="btn">
+                                    <a href="http://jjy981212.dothome.co.kr/m_kwandong/mindex.html" title="모바일 보기"
+                                        target="_blank">mobile</a>
+                                    <a href="http://jjy981212.dothome.co.kr/kwangdong/index.html" title="pc 보기"
+                                        target="_blank">pc</a>
+                                </p>
+                                <a href="http://jjy981212.dothome.co.kr/kwangdong/index.html" title="광동제약 바로가기"
+                                    class="big_link" target="_blank">&nbsp;</a>
                             </div>
-                            <p>칼로바이 리뉴얼 사이트</p>
-                            <p>HTML CSS JS PHP</p>
                         </div>
+                        <p>광동제약 리뉴얼 사이트</p>
+                        <p>HTML CSS JS PHP</p>
                     </div>
-                    <div class="single04 sing">
-                        <img src="./img/buble04.png" alt="풍선" class="buble" />
-                        <div class="card_box">
-                            <div class="card">
-                                <img src="./img/kwang.png" alt="광동" class="wep04 wep" />
-                                <div class="back">
-                                    <p>기여도 : 100%</p>
-                                    <p>작업시간 : 2주</p>
-                                    <p>
-                                        json을 활용하여 만든<br />
-                                        광동제약 리뉴얼 사이트(적응형)
-                                    </p>
-                                    <p class="btn">
-                                        <a href="http://jjy981212.dothome.co.kr/m_kwandong/mindex.html" title="모바일 보기" target="_blank">mobile</a>
-                                        <a href="http://jjy981212.dothome.co.kr/kwangdong/index.html" title="pc 보기" target="_blank" >pc</a>
-                                    </p>
-                                    <a href="http://jjy981212.dothome.co.kr/kwangdong/index.html" title="광동제약 바로가기" class="big_link" target="_blank">&nbsp;</a>
-                                </div>
-                            </div>
-                            <p>광동제약 리뉴얼 사이트</p>
-                            <p>HTML CSS JS PHP</p>
-                        </div>
+                </div>
+                <div class="craft">
+                    <img src="./img/spacecraft.png" alt="우주선" />
+                    <div class="fire">
+                        <!-- 불탄다~ -->
+                        <script>
+                            var parts = 50;
+                            for (var i = 0; i < parts; i++) {
+                                document.write(
+                                    '<div class="particle"></div>'
+                                );
+                            }
+                        </script>
                     </div>
-                    <div class="craft">
-                        <img src="./img/spacecraft.png" alt="우주선" />
-                        <div class="fire">
-                            <!-- 불탄다~ -->
-                            <script>
-                                var parts = 50;
-                                for (var i = 0; i < parts; i++) {
-                                    document.write(
-                                        '<div class="particle"></div>'
-                                    );
-                                }
-                            </script>
-                        </div>
-                    </div>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <h2>
-                <a href="#">
-                    <img src="./img/footer_logo.png" alt="하단로고" />
-                </a>
-            </h2>
-            <address>
-                Copyright © 2022 Jung Jea Yeon. All Rights Reserved
-            </address>
-            <aside>
-                <a href="#" title="맨위로 이동">Back to Top</a>
-            </aside>
-        </footer>
-    </body>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>
+            <a href="#">
+                <img src="./img/footer_logo.png" alt="하단로고" />
+            </a>
+        </h2>
+        <address>
+            Copyright © 2022 Jung Jea Yeon. All Rights Reserved
+        </address>
+        <aside>
+            <a href="#" title="맨위로 이동">Back to Top</a>
+        </aside>
+    </footer>
+</body>
+
 </html>
