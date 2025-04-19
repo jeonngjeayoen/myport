@@ -237,6 +237,14 @@ main {
     font-weight: bold;
     color: #fff;
 }
+.card_box > p{
+    text-align: center;
+    bottom: -180px;
+    left: -50px;
+    position: relative;
+    font-weight: bold;
+    color: #fff;
+}
 @keyframes buble {
     0% {
         margin-top: 0px;
@@ -278,6 +286,9 @@ main {
     }
 }
 @media (max-width: 1000px) {
+    .card_box > p{
+        display: none;
+    }
     .sing .card_box .card,
     .single01,
     .single02,
