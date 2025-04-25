@@ -50,7 +50,7 @@ $(function () {
         });
         var typingTxt = lines[lineIdx];
         if (typingIdx < typingTxt.length) {
-            var tyInt = setInterval(typing, 80);
+            var tyInt = setInterval(typing, 40);
         }
         function typing() {
             $('.cursor').addClass('on');
@@ -78,7 +78,7 @@ $(function () {
                 }
             }
         }
-    }, 1000);
+    });
     $('nav ul li').click(function () {
         var ballIndex = $(this).data('ball-index'); // 클릭한 li의 data-ball-index 값을 가져옴
         animate(ballIndex);
