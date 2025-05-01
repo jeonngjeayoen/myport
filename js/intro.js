@@ -44,30 +44,38 @@ $(function () {
         $('.text_hello').addClass('p_active4');
         var typingIdx = 0;
         var lineIdx = 0;
-        var lines = [];
-        $('.typing-txt ul li').each(function () {
-            lines.push($(this).text()); // 각 줄 추출
-        });
-        var typingTxt = lines[lineIdx];
+
+        // 문자열을 직접 정의하고 줄바꿈 처리
+        var text = `안녕하세요, 항상 무한한 우주처럼
+        성장력이 있는 웹 개발자 정재연입니다.
+        저와 같이 우주여행을 떠나 볼까요?`;
+
+        var lines = text.split('\n'); // 줄바꿈으로 배열 만들기
+        var typingTxt = lines[lineIdx]; // 첫 줄
+
         if (typingIdx < typingTxt.length) {
-            var tyInt = setInterval(typing, 40);
+            var tyInt = setInterval(typing, 70);
         }
+
         function typing() {
             $('.cursor').addClass('on');
             var currentChar = typingTxt[typingIdx];
             var formattedChar = currentChar;
+
+            // 강조 조건
             if (currentChar === '우' || currentChar === '주') {
                 formattedChar =
                     "<span class='space'>" + currentChar + '</span>';
             } else if (currentChar === '웹') {
                 formattedChar = "<span class='wep'>" + currentChar + '</span>';
             }
+
             $('.typing').append(formattedChar);
             typingIdx++;
+
             if (typingIdx >= typingTxt.length) {
-                // 마지막 줄이 아니라면 줄바꿈 추가
                 if (lineIdx < lines.length - 1) {
-                    $('.typing').append('<br>');
+                    $('.typing').append('<br>'); // 줄바꿈
                 }
                 lineIdx++;
                 typingIdx = 0;
@@ -78,7 +86,7 @@ $(function () {
                 }
             }
         }
-    });
+    }, 1000);
     $('nav ul li').click(function () {
         var ballIndex = $(this).data('ball-index'); // 클릭한 li의 data-ball-index 값을 가져옴
         animate(ballIndex);
